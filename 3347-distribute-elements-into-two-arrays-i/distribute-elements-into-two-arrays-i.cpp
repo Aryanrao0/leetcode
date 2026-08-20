@@ -21,8 +21,8 @@ public:
         arr1.push_back(nums[0]);
         arr2.push_back(nums[1]);
 
-        int last1 = nums[0];
-        int last2 = nums[1];
+        int last1 = arr1[0];
+        int last2 = arr2[0];
 
         int i=2;
         while(i<nums.size()){
