@@ -1,14 +1,22 @@
 class Solution {
 public:
     int missingMultiple(vector<int>& nums, int k) {
-        unordered_set<int> st(nums.begin(), nums.end());
+                unordered_map<int, int> mp;
 
-        int x = k;
+        for (int x : nums) {
 
-        while (st.count(x)) {
-            x += k;
+            mp[x]++;
+
         }
 
-        return x;
+        int ans = k;
+
+        while (mp.count(ans)) {
+
+            ans += k;
+
+        }
+
+        return ans;
     }
 };
