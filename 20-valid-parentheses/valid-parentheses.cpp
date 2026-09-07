@@ -4,7 +4,7 @@ public:
         stack<char> st;
 
         for(char ch : s){
-            if(ch == '('){
+            if(ch=='('){
                 st.push(')');
             }
             else if(ch == '{'){
@@ -13,13 +13,15 @@ public:
             else if(ch == '['){
                 st.push(']');
             }
-            else if(st.empty() || st.top()!=ch)
+            else if( st.empty() || st.top()!=ch){
                 return false;
+            }
             else{
                 st.pop();
             }
-
         }
+
         return st.empty();
+        
     }
 };
