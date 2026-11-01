@@ -7,8 +7,10 @@ public:
 
         for(int i=0;i<n;i++){
             sum += nums[i];
-            minn = min(minn,nums[i]);
+            minn = min(minn, nums[i]);
         }
-        return sum - (n * minn);
+
+        return sum - n*minn;
+        
     }
 };
